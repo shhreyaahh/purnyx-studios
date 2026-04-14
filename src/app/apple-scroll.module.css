@@ -1,0 +1,44 @@
+.section {
+  height: 300vh;
+  position: relative;
+  background: linear-gradient(to bottom, #ffffff 0%, #000000 50%, #ffffff 100%);
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+}
+
+.tv {
+  position: relative;
+  width: min(70vw, 900px);
+  aspect-ratio: 16/9;
+  border-radius: 32px;
+  overflow: hidden;
+  box-shadow: 0 80px 160px rgba(0,0,0,0.4);
+  border: 12px solid #111;
+  background: #000;
+  will-change: transform;
+}
+
+.tv > * {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.poster {
+  transition: opacity 0.6s ease;
+  opacity: calc(1 - var(--scale, 0));
+}
+
+.video {
+  opacity: var(--scale, 0);
+}
