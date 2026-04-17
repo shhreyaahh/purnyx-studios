@@ -1,5 +1,4 @@
  "use client";
-
 import { useState, useEffect } from "react";
 
 const images = ["/hero1.jpg", "/hero2.jpg", "/hero3.jpg"];
@@ -41,20 +40,13 @@ const Hero = () => {
       </div>
 
       <div className="hero-curve">
-        <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
-          <defs>
-            <linearGradient id="heroCurveGradient" x1="0%" y1="0%" x2="0%" y2="100%">
-              <stop offset="0%" stopColor="#10254b" />
-              <stop offset="100%" stopColor="#08111f" />
-            </linearGradient>
-          </defs>
-          
-          <path
-d="M0,0 C480,40 960,40 1440,0 L1440,120 L0,120 Z"
-            fill="url(#heroCurveGradient)"
-          />
-        </svg>
-      </div>
+  <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+    <path
+      d="M0,0 C480,40 960,40 1440,0 L1440,120 L0,120 Z"
+      fill="#0b0f1agit"
+    />
+  </svg>
+</div>
 
     </section>
   );
