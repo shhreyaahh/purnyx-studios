@@ -26,7 +26,7 @@ export default function Featured() {
     id: 2,
     title: "Movie 2",
     image: "/image2.jpg",
-    trailer: "/trailer2.mp4",
+    trailer: "/trailer3.mp4",
     genres: ["Horror", "Thriller", "Romance"],
     imdb: "#",
     photos: ["/p2.jpg", "/p4.jpg", "/p6.jpg", "/p8.jpg"]
@@ -35,7 +35,7 @@ export default function Featured() {
     id: 3,
     title: "Movie 3",
     image: "/image3.jpg",
-    trailer: "/trailer3.mp4",
+    trailer: "/trailer1.mp4",
     genres: ["Comedy", "Romance", "Adventure"],
     imdb: "#",
     photos: ["/p1.jpg", "/p2.jpg", "/p3.jpg", "/p4.jpg"]
@@ -44,7 +44,7 @@ export default function Featured() {
     id: 4,
     title: "Movie 4",
     image: "/image4.jpg",
-    trailer: "/trailer4.mp4",
+    trailer: "/trailer3.mp4",
     genres: ["Sci-Fi", "Action", "Adventure"],
     imdb: "#",
     photos: ["/p5.jpg", "/p6.jpg", "/p7.jpg", "/p8.jpg"]

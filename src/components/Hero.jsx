@@ -1,4 +1,4 @@
-"use client";
+ "use client";
 
 import { useState, useEffect } from "react";
 
@@ -48,9 +48,10 @@ const Hero = () => {
               <stop offset="100%" stopColor="#08111f" />
             </linearGradient>
           </defs>
+          
           <path
 d="M0,0 C480,40 960,40 1440,0 L1440,120 L0,120 Z"
-            fill="#0b0f1a"
+            fill="url(#heroCurveGradient)"
           />
         </svg>
       </div>
@@ -60,3 +61,4 @@ d="M0,0 C480,40 960,40 1440,0 L1440,120 L0,120 Z"
 };
 
 export default Hero;
+
