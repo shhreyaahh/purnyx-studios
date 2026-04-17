@@ -34,10 +34,10 @@ const Hero = () => {
   ›
 </button>
 
-      <div className="hero-content">
-        <h1>Movie Title</h1>
-        <p>Short description goes here</p>
-        <button>Watch Trailer</button>
+      <div className="hero-content hero-content--button-only">
+        {/* <h1>Movie Title</h1>
+        <p>Short description goes here</p> */}
+        <button>Watch on App</button>
       </div>
 
       <div className="hero-curve">
@@ -49,11 +49,12 @@ const Hero = () => {
             </linearGradient>
           </defs>
           <path
-            d="M0,0 C480,120 960,120 1440,0 L1440,120 L0,120 Z"
-            fill="url(#heroCurveGradient)"
+d="M0,0 C480,40 960,40 1440,0 L1440,120 L0,120 Z"
+            fill="#0b0f1a"
           />
         </svg>
       </div>
+
     </section>
   );
 };

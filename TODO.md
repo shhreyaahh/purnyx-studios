@@ -1,12 +1,22 @@
-# Task Progress: Fix Scrambled Layout & Missing Animations
+# Hero Curve Outward Drop Shadow Task
 
-**Status: Completed - Premium UI Upgrade Applied**
+## Steps:
 
-1. [x] Diagnose issue (custom CSS missing from globals.css)
-2. [x] Restore all custom styles (hero slider, carousel, hovers, responsive)
-3. [x] Fix Tailwind v4 setup
-4. [x] Switch to Inter font stack (-apple-system + Inter fallback) for Apple SF-like premium readability
-5. [x] Update weights (400-700), letter-spacing 0.025em, logo/heading optimizations
-6. [x] Run dev server in terminal
+- [x] 1. Create this TODO.md
+- [x] 2. Edit globals.css with outward shadows (blue-whitish glow)
+- [x] 3. Verify in browser (run `npm run dev`)
+- [x] 4. Mark complete & attempt_completion
 
-**Next:** Run `cd movie-website && npm run dev` → crisp Apple-style typography + smooth animations!
+✅ Feedback fixes applied:
+
+- Reverted .hero overflow: hidden (fixes image split)
+- .hero-curve box-shadow: 0 -12px 30px rgba(100,160,255,0.18) (blue-whitish outward)
+- .hero-curve svg filter: drop-shadow(0 -3px 10px rgba(255,255,255,0.08))
+
+v3 Complete: SVG shadow path + image z-index fix.
+
+- Hero.jsx: Added shadow-path use + id for curve shape.
+- globals.css: .shadow-path styled with outward drop-shadow following exact curve contour.
+- Images z-index:1 prevents overflow/split.
+
+Refresh browser (localhost:3001). Outward curve-shaped blue-white glow now works.

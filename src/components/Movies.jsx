@@ -8,6 +8,7 @@ const Movies = () => {
 
   const [showLeft, setShowLeft] = useState(false);
   const [showRight, setShowRight] = useState(true);
+  const [activeTab, setActiveTab] = useState("movies");
 
   const movies = [
     { id: 1, title: "MOVIE A", image: "/img1.jpg" },
@@ -18,6 +19,15 @@ const Movies = () => {
     { id: 6, title: "MOVIE F", image: "/img6.jpg" },
     { id: 7, title: "MOVIE G", image: "/img7.jpg" },
   ];
+
+  const tvShows = [
+    { id: 1, title: "SHOW A", image: "/tv1.jpg" },
+    { id: 2, title: "SHOW B", image: "/tv2.jpg" },
+    { id: 3, title: "SHOW C", image: "/tv3.jpg" },
+    { id: 4, title: "SHOW D", image: "/tv4.jpg" },
+  ];
+
+  const dataToShow = activeTab === "movies" ? movies : tvShows;
 
   const checkScroll = () => {
     const el = scrollRef.current;
@@ -35,12 +45,35 @@ const Movies = () => {
     el.addEventListener("scroll", checkScroll);
 
     return () => el.removeEventListener("scroll", checkScroll);
-  }, []);
+  }, [activeTab]);
+
+  const handleTabChange = (tab) => {
+    setActiveTab(tab);
+
+    // reset scroll when switching
+    if (scrollRef.current) {
+      scrollRef.current.scrollTo({ left: 0 });
+    }
+  };
 
   return (
     <section className="movies">
-      <h2 className="featured-heading">MOVIES</h2>
 
+     <div className="movies-toggle">
+  <button
+    className={activeTab === "movies" ? "active" : ""}
+    onClick={() => handleTabChange("movies")}
+  >
+    Films
+  </button>
+
+  <button
+    className={activeTab === "tv" ? "active" : ""}
+    onClick={() => handleTabChange("tv")}
+  >
+    TV Series
+  </button>
+</div>
       <div className="movies-container">
 
         {/* LEFT BUTTON */}
@@ -55,9 +88,9 @@ const Movies = () => {
           </button>
         )}
 
-        {/* MOVIES ROW */}
+        {/* MOVIES / TV ROW */}
         <div className="movies-row" ref={scrollRef}>
-          {movies.map((movie) => (
+          {dataToShow.map((movie) => (
             <MovieCard key={movie.id} movie={movie} />
           ))}
         </div>
@@ -75,6 +108,12 @@ const Movies = () => {
         )}
 
       </div>
+
+      {/* LOAD MORE */}
+      <div className="load-more">
+        <button>LOAD MORE</button>
+      </div>
+
     </section>
   );
 };

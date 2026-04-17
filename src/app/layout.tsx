@@ -1,12 +1,10 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Inter } from 'next/font/google';
+import { Manrope } from "next/font/google";
 
-
-
-const inter = Inter({
-  subsets: ['latin'],
-  weight: ['400', '500', '600', '700', '800'], // Add the desired font weights
+const manrope = Manrope({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
 });
 
 
@@ -21,8 +19,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="h-full antialiased font-['Inter'] leading-relaxed tracking-[0.025em]">
-      <body>{children}</body>
+    <html lang="en" className="h-full antialiased leading-relaxed tracking-[0.025em]">
+      <body className={manrope.className}>{children}</body>
     </html>
   );
 }
