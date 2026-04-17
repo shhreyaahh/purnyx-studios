@@ -43,7 +43,7 @@ const Hero = () => {
   <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
     <path
       d="M0,0 C480,40 960,40 1440,0 L1440,120 L0,120 Z"
-      fill="#0b0f1agit"
+      fill="#0b0f1a"
     />
   </svg>
 </div>
